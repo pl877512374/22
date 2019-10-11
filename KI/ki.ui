@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KIClass</class>
+ <widget class="QMainWindow" name="KIClass">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1136</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>KI</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>241</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>网络设置</string>
+    </property>
+    <widget class="QLineEdit" name="hostLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="portLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IP地址：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>70</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>端口号：</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_BroadCast">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>120</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>广播</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="tbr_Info">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>221</width>
+       <height>461</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Conn">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>120</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>连接</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>330</y>
+      <width>871</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab_Get">
+     <attribute name="title">
+      <string>靶标获取/设置</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>861</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>靶标获取信息</string>
+      </property>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>10</y>
+         <width>54</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>靶标总数：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_GetNum">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>10</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="TBW_lmkget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>731</width>
+         <height>171</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>50</y>
+         <width>111</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>导入文件靶标</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_outdata">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>90</y>
+         <width>111</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>导出选中靶标信息</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_query">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>130</y>
+         <width>111</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>查询信息</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_setting">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>170</y>
+         <width>111</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>设置信息</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_Nav">
+     <attribute name="title">
+      <string>导航/探测</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>20</y>
+        <width>271</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>靶标信息</string>
+      </property>
+      <widget class="QTableView" name="TB_LMDetectInfo">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>231</width>
+         <height>151</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>54</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>靶标总数：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_DetNum">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>10</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>141</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>扫描数据信息</string>
+      </property>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>90</y>
+         <width>191</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>GroupBox</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_Continue">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>0</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>获取连续波形</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>20</y>
+        <width>191</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>激光器位置</string>
+      </property>
+      <widget class="QGroupBox" name="groupBox_7">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>90</y>
+         <width>191</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>GroupBox</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>有效标志</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_effmark">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>30</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_ang">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>70</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>方向角(deg)</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_px">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>110</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>X坐标(mm)</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_py">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>150</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Y坐标(mm)</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox2">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>0</y>
+      <width>861</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>显示设置</string>
+    </property>
+    <widget class="QPushButton" name="btn_nav">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>导航</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_chibiao">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>尺标</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_XDown">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>X-</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Rotate">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>90Z</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_YUP">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Y+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_ZUP">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Z+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_PointTest">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>线</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_MarkDetect">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>靶标探测</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_ZDOWN">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Z-</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_YDown">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Y-</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_LMGet">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>靶标获取</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_XUP">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>X+</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>50</y>
+      <width>861</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>GroupBox</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="ki.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btn_ZDOWN</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>MoveZDOWN()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>257</x>
+     <y>44</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_YUP</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>MoveYUP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>403</x>
+     <y>47</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_XUP</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>MoveXUP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>420</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>359</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_XDown</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>MoveXDOWN()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>460</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>656</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_YDown</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>MoveYDOWN()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>540</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_PointTest</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>PointTest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>620</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>481</x>
+     <y>52</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>Cylinder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1012</x>
+     <y>435</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>751</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_BroadCast</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>Broadcast()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>102</x>
+     <y>281</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_chibiao</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>CBClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>660</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>898</x>
+     <y>17</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_MarkDetect</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>LandMarkDetect_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>720</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_Continue</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>Con_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>544</x>
+     <y>383</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>502</x>
+     <y>583</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_LMGet</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>LMGetClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>476</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_ZUP</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>MoveZUP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>340</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>125</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_setting</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>LMSettingClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1012</x>
+     <y>555</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_query</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>LMQueryClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1012</x>
+     <y>515</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>259</x>
+     <y>331</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_nav</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>NavClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>889</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_Conn</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>ConnClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>169</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_Rotate</sender>
+   <signal>clicked()</signal>
+   <receiver>KIClass</receiver>
+   <slot>RotateClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>546</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>MoveZUP()</slot>
+  <slot>MoveZDOWN()</slot>
+  <slot>MoveXUP()</slot>
+  <slot>MoveXDOWN()</slot>
+  <slot>MoveYUP()</slot>
+  <slot>MoveYDOWN()</slot>
+  <slot>PointTest()</slot>
+  <slot>RotateViewTo()</slot>
+  <slot>Cylinder()</slot>
+  <slot>BroClick()</slot>
+  <slot>Broadcast()</slot>
+  <slot>CBClick()</slot>
+  <slot>LandMarkDetect_Click()</slot>
+  <slot>Con_Click()</slot>
+  <slot>LMGetClick()</slot>
+  <slot>LMSettingClick()</slot>
+  <slot>LMQueryClick()</slot>
+  <slot>NavClick()</slot>
+  <slot>ConnClick()</slot>
+  <slot>RotateClick()</slot>
+ </slots>
+</ui>
